@@ -6,12 +6,12 @@
 //   );
 // }
 
-function TabButton({ children, onSelect, isSelected }) {
+function TabButton({ children, isSelected, ...props }) {
   console.log("TabButton rendered");
 
   return (
     <li>
-      <button className={isSelected ? "active" : ""} onClick={onSelect}>
+      <button className={isSelected ? "active" : undefined} {...props}>
         {children}
       </button>
     </li>
